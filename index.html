@@ -81,31 +81,36 @@
       flex: 1;
       height: 100%;
       overflow: hidden;
+      display: flex;
+      align-items: center;
+    }
+
+    .marquee {
+      display: flex;
+      width: max-content;
+      white-space: nowrap;
+      will-change: transform;
+
+      animation: scroll 52s linear infinite;
     }
 
     .message {
-      position: absolute;
-      top: 50%;
-      left: 100%;
-
-      transform: translateY(-50%);
+      flex-shrink: 0;
+      padding-right: 90px;
 
       font-size: 19px;
       font-weight: 700;
-      white-space: nowrap;
 
       text-shadow: 0 1px 3px rgba(0, 0, 0, 0.75);
-
-      animation: scroll 35s linear infinite;
     }
 
     @keyframes scroll {
       from {
-        transform: translate(0, -50%);
+        transform: translateX(0);
       }
 
       to {
-        transform: translate(-135%, -50%);
+        transform: translateX(-50%);
       }
     }
   </style>
@@ -123,19 +128,36 @@
     </div>
 
     <div class="track">
-      <div class="message">
-        VISUALIZING HVAC EXCELLENCE
-        &nbsp; • &nbsp;
-        See it. Learn it. Apply it.
-        &nbsp; • &nbsp;
-        Interactive HVACR learning from Visual 3D Academy
-        &nbsp; • &nbsp;
-        Learn more at www.visual3dacademy.com
-        &nbsp; • &nbsp;
-        info@visual3dacademy.com
-        &nbsp; • &nbsp;
-        309-323-0013
-        &nbsp; • &nbsp;
+      <div class="marquee">
+
+        <div class="message">
+          VISUALIZING HVAC EXCELLENCE
+          &nbsp; • &nbsp;
+          See it. Learn it. Apply it.
+          &nbsp; • &nbsp;
+          Interactive HVACR learning from Visual 3D Academy
+          &nbsp; • &nbsp;
+          Learn more at www.visual3dacademy.com
+          &nbsp; • &nbsp;
+          info@visual3dacademy.com
+          &nbsp; • &nbsp;
+          309-323-0013
+        </div>
+
+        <div class="message" aria-hidden="true">
+          VISUALIZING HVAC EXCELLENCE
+          &nbsp; • &nbsp;
+          See it. Learn it. Apply it.
+          &nbsp; • &nbsp;
+          Interactive HVACR learning from Visual 3D Academy
+          &nbsp; • &nbsp;
+          Learn more at www.visual3dacademy.com
+          &nbsp; • &nbsp;
+          info@visual3dacademy.com
+          &nbsp; • &nbsp;
+          309-323-0013
+        </div>
+
       </div>
     </div>
 
