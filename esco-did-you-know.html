@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>ESCO Did You Know Ticker</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+      background: transparent;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .ticker {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 58px;
+
+      display: flex;
+      align-items: center;
+
+      overflow: hidden;
+      color: #ffffff;
+
+      background: rgba(0, 76, 130, 0.58);
+      border-bottom: 2px solid rgba(227, 27, 35, 0.75);
+
+      backdrop-filter: blur(3px);
+      -webkit-backdrop-filter: blur(3px);
+    }
+
+    .logo-box {
+      position: relative;
+      z-index: 2;
+
+      height: 100%;
+      min-width: 155px;
+      padding: 4px 14px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: rgba(255, 255, 255, 0.84);
+    }
+
+    .logo-box.left {
+      border-right: 2px solid rgba(227, 27, 35, 0.65);
+    }
+
+    .logo-box.right {
+      border-left: 2px solid rgba(227, 27, 35, 0.65);
+    }
+
+    .logo {
+      display: block;
+      max-width: 135px;
+      max-height: 48px;
+      object-fit: contain;
+    }
+
+    .hvac-logo {
+      max-width: 128px;
+      max-height: 50px;
+    }
+
+    .track {
+      position: relative;
+      flex: 1;
+      height: 100%;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+    }
+
+    .marquee {
+      display: flex;
+      width: max-content;
+      white-space: nowrap;
+      will-change: transform;
+
+      animation: scroll 64s linear infinite;
+    }
+
+    .message {
+      flex-shrink: 0;
+      padding-right: 140px;
+
+      font-size: 19px;
+      font-weight: 700;
+
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.75);
+    }
+
+    @keyframes scroll {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="ticker">
+
+    <div class="logo-box left">
+      <img
+        class="logo"
+        src="esco-logo.png"
+        alt="ESCO Institute"
+      >
+    </div>
+
+    <div class="track">
+      <div class="marquee">
+
+        <div class="message">
+          DID YOU KNOW? THE ESCO HVACR SHOW
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          Quick HVACR insights for educators, technicians, and industry professionals
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          Training, certification, and industry knowledge from ESCO Institute &amp; HVAC Excellence
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          Learn more at www.escogroup.org
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          customerservice@escogroup.org
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          800-726-9696
+        </div>
+
+        <div class="message" aria-hidden="true">
+          DID YOU KNOW? THE ESCO HVACR SHOW
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          Quick HVACR insights for educators, technicians, and industry professionals
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          Training, certification, and industry knowledge from ESCO Institute &amp; HVAC Excellence
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          Learn more at www.escogroup.org
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          customerservice@escogroup.org
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          800-726-9696
+        </div>
+
+      </div>
+    </div>
+
+    <div class="logo-box right">
+      <img
+        class="logo hvac-logo"
+        src="hvac-excellence-logo.png"
+        alt="HVAC Excellence"
+      >
+    </div>
+
+  </div>
+</body>
+</html>
